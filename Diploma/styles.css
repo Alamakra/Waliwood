@@ -1,0 +1,423 @@
+@media (max-width: 1024px) {
+    /* Контейнер теперь занимает 100% ширины */
+   
+    
+    .container {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Фото профиля теперь растягивается от края до края */
+    .container img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Подгоняет изображение */
+    }
+
+    /* Текст теперь под фото и центрирован */
+    .container .text {
+        padding: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Контейнеры уменьшаются при сжатии экрана */
+    .mySkills,
+    .expBox {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .skillBox {
+        width: 80%;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+
+    /* Блоки с соцсетями теперь адаптивные */
+    .box {
+        width: 90%;
+        height: auto;
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .box img {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Адаптация футера */
+    footer {
+        height: auto;
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Маленькие экраны (мобильные) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1em;
+    }
+
+    p{
+        font-size: 1em;
+    }
+    main {
+        width: 100%;
+    }
+
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container{
+        width: 100%;
+    }
+    /* Фото профиля на всю ширину */
+    .container img {
+        height: 70%;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .container .text {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Контейнеры уменьшаются */
+    .expBox,
+    .mySkills {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .skillBox {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Соцсети занимают меньше места */
+    .box {
+        width: 50%;
+        padding: 10px;
+    }
+
+    .box img {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Навигация адаптируется */
+    .navigation ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .description {
+        margin-top: 100px;
+        width: 60%;
+    }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+@keyframes slideUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+    
+    margin : 0;
+    padding: 0;
+}
+body,html{
+    background-color: #4a4a4a;
+    
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    height: 100px;
+    width: 100%;
+    padding: 0 5%;
+    position: fixed;
+}
+header h1 {
+    color: #4a4a4a;
+    font-weight: 300;
+}
+
+main {
+    background-image: url(https://c.pxhere.com/photos/60/5b/sky_color_building_50mm_nikon_shape_agfa_nikonf3-185249.jpg!d);
+    
+    width: 100%;
+    height: 500px;
+    
+    display: flex;
+    justify-content: center ;
+
+
+}
+
+
+
+aside {
+    display: flex;
+    flex-direction: column; /* Элементы располагаются вертикально */
+    justify-content: center;
+    align-items: center;
+    height : 700px;
+    padding-top: 10%;
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+.description {
+    width: 800px; /* Ограничиваем ширину для лучшей читаемости */
+    margin-bottom: 20px; /* Добавляем отступ перед списком */
+
+    
+
+    color: #fff;
+    
+}
+.expBox{
+    height: 1300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.mySkills{
+    height: 500px;
+    width: 80%;
+    background-color: #fff;
+
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    
+    
+    
+
+}
+
+.skillBox{
+    height: 500px;
+    width: 200px;
+    border: #1e1e1e;
+    background-color: #1e1e1e;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+
+
+aside ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin-top:  45px;
+}
+
+aside ul li {
+    
+    display: inline;
+}
+
+
+
+
+
+footer {
+    height: 100px;
+    width: 100%;
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin-right: -550px;
+}
+
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+.navigation ul li {
+    font-weight: 100;
+    display: inline;
+    
+    
+    
+}
+
+
+.item {
+    position: relative;
+
+    text-decoration:none;
+    color: #1e1e1e;
+    font-size: 18px;
+    
+    cursor: pointer;
+    
+    
+}
+
+.item:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #1e1e1e;
+    transform: scaleX(0);
+    transition: transform 0.7s ease;
+
+}
+
+.item:hover:after {
+    transform: scaleX(1);
+    
+    
+}
+
+.box {
+    height: 250px;
+    width: 300px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    color: #1e1e1e;
+
+    display: flex;
+    flex-direction: column;  /* Располагаем элементы вертикально */
+    align-items: center;  
+    justify-content: flex-end; /* Перемещаем текст вниз */
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 20px; /* Отступ текста от низа */
+}
+
+.box img {
+    height: 200px;
+    width: 200px;
+}
+
+
+.preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #333; /* Серый фон */
+    color: #fff; /* Белый текст */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    animation: slideUp 1s ease-in-out 1s forwards;
+}
+
+
+
+
+.container {
+    height: 500px;
+    width: 50%;
+    display: flex;
+    background-color: #fff;
+    display: flex;
+    justify-content: center space-between;
+    
+    
+    
+    background:#fff;
+    
+    
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+    margin-top: 150px;
+    }
+
+.container img {
+    height:100%;
+    width: 50%;
+}
+
+
+.container .text {
+    
+    color: #1e1e1e;
+    flex-direction: column;
+    padding-top: 10%;
+    padding-left: 10%;
+    
+    
+}
+
+.exexperience {
+    height: 700px;
+    width: 70%;
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
